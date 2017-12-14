@@ -1,0 +1,44 @@
+{
+  "name": "react-on-scroll",
+  "version": "0.1.0",
+  "description": "React to scroll events: animate components, lazy load data, infinite scroll",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erichbehrens/react-on-scroll.git"
+  },
+  "author": "Erich Behrens <me@eb1.it>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erichbehrens/react-on-scroll/issues"
+  },
+  "homepage": "https://github.com/erichbehrens/react-on-scroll#readme",
+  "dependencies": {
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.1",
+    "raw-loader": "^0.5.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
