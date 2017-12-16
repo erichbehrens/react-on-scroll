@@ -1,0 +1,31 @@
+.item {
+  margin-bottom: 120px;
+}
+
+.title,
+.subtitle,
+.description {
+  transition: 1s all ease
+}
+
+.visible {
+  opacity: 1;
+}
+.hidden {
+  opacity: 0;
+}
+
+.subtitle.visible {
+  transform: translateX(0);
+}
+.subtitle.hidden {
+  transform: translateX(-100%);
+}
+
+.description.visible {
+  transform: rotateX(0);
+}
+.description.hidden {
+  transform: rotateX(90deg);
+  opacity: 1;
+}
