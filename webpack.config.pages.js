@@ -8,8 +8,8 @@ module.exports = {
 	],
 	output: {
 		path: path.join(__dirname, 'pages'),
-		publicPath: '/pages/',
-		filename: 'bundle.js',
+		publicPath: '/',
+		filename: 'index.js',
 	},
 
 	module: {
@@ -24,7 +24,7 @@ module.exports = {
 			template: './src/pages/index.html',
 			files: {
 				css: ['style.css'],
-				js: ['bundle.js'],
+				js: ['index.js'],
 			},
 		}),
 	],

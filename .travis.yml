@@ -16,5 +16,4 @@ deploy:
   github_token: $github_token
   local_dir: build
   on:
-    branch: test/github-pages
     branch: master
