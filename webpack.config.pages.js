@@ -8,8 +8,7 @@ module.exports = {
 	],
 	output: {
 		path: path.join(__dirname, 'pages'),
-		publicPath: '/',
-		filename: 'index.js',
+		filename: './index.js',
 	},
 
 	module: {
