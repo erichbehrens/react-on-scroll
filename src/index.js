@@ -28,11 +28,18 @@ class OnScroll extends React.Component {
 	}
 
 	onScroll = () => {
-		const position = getElementPosition(this.element);
+		const { fromTop, fromBottom } = getElementPosition(this.element);
 		const { triggerBase } = this.props;
 		const nextTriggers = this.triggers.map((trigger) => {
-			const currentState = (!trigger.bottom || trigger.bottom < position.fromBottom[triggerBase])
-				&& (!trigger.top || trigger.top < position.fromTop[triggerBase]);
+			let currentState;
+			if (!triggerBase) {
+				// xor
+				currentState = (trigger.top < fromTop.top) !== (trigger.bottom < fromTop.bottom);
+			} else {
+				currentState =
+					(typeof trigger.bottom === 'undefined' || trigger.bottom < fromBottom[triggerBase]) &&
+					(typeof trigger.top === 'undefined' || trigger.top < fromTop[triggerBase]);
+			}
 			if (currentState !== trigger.lastState) {
 				trigger.callback(currentState);
 				const executionCount = (trigger.executionCount || 0) + 1;
