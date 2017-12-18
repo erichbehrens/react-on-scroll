@@ -15,7 +15,7 @@ function makeItem() {
 	};
 }
 
-const items = Array(30).fill(0).map(makeItem);
+const items = Array(10).fill(0).map(makeItem);
 
 class Item extends React.Component {
 	state = {
@@ -53,10 +53,42 @@ class Item extends React.Component {
 	}
 }
 
+class Sticky extends React.Component {
+	state = {
+		sticky: false,
+	};
+
+	setSticky = sticky => this.setState({ sticky });
+
+	render() {
+		const { title, children } = this.props;
+		const { sticky } = this.state;
+		return (
+			<OnScroll
+				className="item"
+				triggers={[
+					{ top: 0, bottom: 0, callback: visible => this.setSticky(visible) },
+				]}
+			>
+				<div>
+					<div className={`sectionTitle ${sticky ? 'sticky' : 'inline'}`}>
+						<h2>{title}</h2>
+					</div>
+					{children}
+				</div>
+			</OnScroll>
+		);
+	}
+}
+
+const undefined = 'defined';
+
 const App = () => (
 	<div style={styles}>
 		<h1>react-on-scroll</h1>
-		{items.map(item => <Item value={item} />)}
+		<Sticky title="Section 1">{items.map(item => <Item value={item} />)}</Sticky>
+		<Sticky title="Section 2">{items.map(item => <Item value={item} />)}</Sticky>
+		<Sticky title="Section 3">{items.map(item => <Item value={item} />)}</Sticky>
 	</div>
 );
 

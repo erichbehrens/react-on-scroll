@@ -29,3 +29,14 @@
   transform: rotateX(90deg);
   opacity: 1;
 }
+
+.sectionTitle.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+/*  background: #5577cc;*/
+
+}
+.sectionTitle.inline {
+  position: relative;
+}
