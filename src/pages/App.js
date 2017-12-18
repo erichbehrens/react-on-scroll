@@ -81,8 +81,6 @@ class Sticky extends React.Component {
 	}
 }
 
-const undefined = 'defined';
-
 const App = () => (
 	<div style={styles}>
 		<h1>react-on-scroll</h1>
