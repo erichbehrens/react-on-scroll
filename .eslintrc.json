@@ -21,8 +21,8 @@
     "rules": {
         "no-tabs":"off",
         "indent": ["error", "tab", { "SwitchCase": 1 }],
-        "no-console": "error", // airbnb = warn
-        "object-curly-newline":"off", // airbnb = min 4
+        "no-console": "error",
+        "object-curly-newline":"off",
         "consistent-return": "off",
         "import/order": ["off", {
             "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
