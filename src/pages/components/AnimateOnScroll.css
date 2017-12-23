@@ -1,0 +1,41 @@
+.item {
+  margin-bottom: 120px;
+
+  & .title {
+    transition: 2s all ease;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  & .subtitle {
+    transition: 1s all ease;
+
+    &.visible {
+      transform: translateX(0);
+    }
+
+    &.hidden {
+      transform: translateX(-100%);
+    }
+  }
+
+  & .description {
+    transition: 1s all ease;
+
+    &.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &.hidden {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+}

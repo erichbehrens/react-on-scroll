@@ -3,58 +3,37 @@
   padding: 0;
 }
 
-.item {
-  margin-bottom: 120px;
-}
-
-.title,
-.subtitle,
-.description {
-  transition: 1s all ease
-}
-
-.visible {
-  opacity: 1;
-}
-.hidden {
-  opacity: 0;
-}
-
-.subtitle.visible {
-  transform: translateX(0);
-}
-.subtitle.hidden {
-  transform: translateX(-100%);
-}
-
-.description.visible {
-  transform: rotateX(0);
-}
-.description.hidden {
-  transform: rotateX(90deg);
-  opacity: 1;
-}
-
-.sectionTitle {
-  transition: .5s all ease
-}
-.sectionTitle.sticky {
+.mainTitle {
   position: fixed;
+  background: #2d5dfd;
+  color: white;
+  width: 100%;
+  height: 50px;
   top: 0;
-  width: 100%;
-  height: 40px;
-  background: rgb(100, 141, 230, 1);
-  font-size: 20px;
   z-index: 999;
-}
-.sectionTitle.inline {
-  position: absolute;
-  width: 100%;
-  background: rgb(100, 141, 230, 0);
-  font-size: 30px;
-  height: 60px;
+
+  & h1,
+  & .shield {
+    position: absolute;
+    top: 50%;
+
+    &.npm {
+      right: 50%;
+      transform: translateX(-200px) translateY(-50%);
+    }
+
+    &.github {
+      left: 50%;
+      transform: translateX(200px) translateY(-50%);
+    }
+  }
+
+  & h1 {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
-.sectionContent {
-  padding-top: 60px;
+.content {
+  margin-top: 50px;
 }
