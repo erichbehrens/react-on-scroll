@@ -69,6 +69,7 @@ class OnScroll extends React.Component {
 	componentDidMount() {
 		if (typeof window !== 'undefined' && window.addEventListener) {
 			window.addEventListener('scroll', this.handleScroll);
+			this.handleScroll();
 		}
 	}
 
