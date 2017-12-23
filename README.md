@@ -34,7 +34,7 @@ React to scroll events: animate components, lazy load data, infinite scroll
 
 ## Examples
 
-https://github.com/erichbehrens/react-on-scroll/tree/master/pages/components
+https://github.com/erichbehrens/react-on-scroll/tree/master/src/pages/components
 ### Sticky section header
 #### Implementation
 ```jsx
