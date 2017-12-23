@@ -65,16 +65,16 @@ class Sticky extends React.Component {
 		const { sticky } = this.state;
 		return (
 			<OnScroll
-				className="item"
+				className="section"
 				triggers={[
-					{ top: 0, bottom: 0, callback: visible => this.setSticky(visible) },
+					{ top: 0, bottom: -75, callback: visible => this.setSticky(visible) },
 				]}
 			>
 				<div>
 					<div className={`sectionTitle ${sticky ? 'sticky' : 'inline'}`}>
 						<h2>{title}</h2>
 					</div>
-					{children}
+					<div className="sectionContent">{children}</div>
 				</div>
 			</OnScroll>
 		);
