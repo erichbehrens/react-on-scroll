@@ -69,6 +69,7 @@ class OnScroll extends React.Component {
 	componentDidMount() {
 		if (typeof window !== 'undefined' && window.addEventListener) {
 			window.addEventListener('scroll', this.handleScroll);
+			setTimeout(this.handleScroll); // wait for react AND the browser to repaint
 		}
 	}
 

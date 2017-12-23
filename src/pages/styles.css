@@ -1,42 +1,39 @@
-.item {
-  margin-bottom: 120px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.title,
-.subtitle,
-.description {
-  transition: 1s all ease
-}
-
-.visible {
-  opacity: 1;
-}
-.hidden {
-  opacity: 0;
-}
-
-.subtitle.visible {
-  transform: translateX(0);
-}
-.subtitle.hidden {
-  transform: translateX(-100%);
-}
-
-.description.visible {
-  transform: rotateX(0);
-}
-.description.hidden {
-  transform: rotateX(90deg);
-  opacity: 1;
-}
-
-.sectionTitle.sticky {
+.mainTitle {
   position: fixed;
-  top: 0;
+  background: #2d5dfd;
+  color: white;
   width: 100%;
-/*  background: #5577cc;*/
+  height: 50px;
+  top: 0;
+  z-index: 999;
 
+  & h1,
+  & .shield {
+    position: absolute;
+    top: 50%;
+
+    &.npm {
+      right: 50%;
+      transform: translateX(-200px) translateY(-50%);
+    }
+
+    &.github {
+      left: 50%;
+      transform: translateX(200px) translateY(-50%);
+    }
+  }
+
+  & h1 {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
-.sectionTitle.inline {
-  position: relative;
+
+.content {
+  margin-top: 50px;
 }
